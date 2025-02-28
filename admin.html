@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            padding: 30px;
+        }
+        .card {
+            background-color: #fff;
+            width: 250px;
+            margin: 15px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .card p {
+            color: #555;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        .btn {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #2c3e50;
+            color: white;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        .logout-btn {
+            background-color: #e74c3c;
+            color: white;
+        }
+        .logout-btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Admin Dashboard
+</header>
+
+<div class="container">
+    <!-- Card for Editing Doctors -->
+    <div class="card">
+        <h3>Doctors</h3>
+        <p>Manage and update doctor details</p>
+        <button class="btn" onclick="window.location.href='/edit_doctors'">Edit Doctors</button>
+    </div>
+
+    <!-- Card for Managing Patient Records -->
+    <div class="card">
+        <h3>Patient Records</h3>
+        <p>View and manage patient records</p>
+        <button class="btn" onclick="window.location.href='/manage_patients'">Manage Patients</button>
+    </div>
+
+    <!-- Card for Appointment Records -->
+    <div class="card">
+        <h3>Appointment Records</h3>
+        <p>View and manage daily appointment records</p>
+        <button class="btn" onclick="window.location.href='/appointment_records'">View Appointments</button>
+    </div>
+
+    <!-- Card for Logout -->
+    <div class="card">
+        <h3>Logout</h3>
+        <p>Exit the admin dashboard</p>
+        <button class="btn logout-btn" onclick="window.location.href='/logout'">Logout</button>
+    </div>
+</div>
+
+<footer>
+    &copy; 2025 Admin Dashboard | All Rights Reserved
+</footer>
+
+</body>
+</html>
